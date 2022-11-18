@@ -1,27 +1,22 @@
 <template>
-  <nav><router-link to="/">Home</router-link></nav>
-  <router-view />
+  <div class="wrapper-outer">
+    <div class="wrapper-inner">
+      <navbar-component />
+      <div><router-view /></div>
+    </div>
+  </div>
+
+  <footer class="footer-bottom">
+    <p class="footer-item">Impressum</p>
+    <p class="footer-item">Datenschutz</p>
+  </footer>
 </template>
 
+<script setup lang="ts">
+import NavbarComponent from "@/components/NavbarComponent.vue";
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import "@/assets/cibumArs.css";
+@import "@/assets/style.scss";
 </style>
