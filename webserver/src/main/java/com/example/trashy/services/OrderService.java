@@ -23,5 +23,15 @@ public class OrderService {
         orderRepository.save(order);
     }
 
+    /*
+    not supposed to actually delete an Order,
+    but to potentially reduce/change amount/price of Order
+     */
+    public void deleteOrder(Order order){
+
+    }
+
+
+
 
 }
