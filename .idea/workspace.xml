@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a9ee499-f3f0-45c7-8565-234085dfa641" name="Changes" comment="Added Database connection">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/requests/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/Can.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/Can.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/francisco/Documents/Francisco/trashy/webserver",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -53,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668805638511</updated>
       <workItem from="1668805640970" duration="2922000" />
+      <workItem from="1668809603237" duration="49000" />
     </task>
     <task id="LOCAL-00001" summary="Added Database connection">
       <created>1668810169356</created>
