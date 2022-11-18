@@ -8,6 +8,8 @@ public class TrashyApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TrashyApplication.class, args);
+
+
     }
 
 }
