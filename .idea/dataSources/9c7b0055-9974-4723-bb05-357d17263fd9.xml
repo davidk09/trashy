@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db85015@mysql05.manitu.net">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.43">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <ServerVersion>10.6.8</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="db85015">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+  </database-model>
+</dataSource>
