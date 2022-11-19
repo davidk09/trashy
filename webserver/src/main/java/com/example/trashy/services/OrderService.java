@@ -29,6 +29,30 @@ public class OrderService {
             throw new IllegalArgumentException("Order cannot be null");
         }
 
+        //Check if existing order from same user exists
+        Optional<Order> existingOrderOptional = orderRepository.findOrderByUserAndPriceAndCanType(order.getUser(), order.getPrice(), order.getCanType());
+        if (existingOrderOptional.isPresent()) {
+            Order existingOrder = existingOrderOptional.get();
+            //check if type is the same, if yes add, if not substract and if result negative change type, if result 0 delete order
+            if (existingOrder.getType().equals(order.getType())) {
+                existingOrder.setQuantity(existingOrder.getQuantity() + order.getQuantity());
+                orderRepository.save(existingOrder);
+            } else {
+                int newQuantity = existingOrder.getQuantity() - order.getQuantity();
+                if (newQuantity > 0) {
+                    existingOrder.setQuantity(newQuantity);
+                    orderRepository.save(existingOrder);
+                } else if (newQuantity < 0) {
+                    existingOrder.setQuantity(-newQuantity);
+                    existingOrder.setType(order.getType());
+                    orderRepository.save(existingOrder);
+                } else {
+                    orderRepository.delete(existingOrder);
+                }
+            }
+        }
+
+
         String orderType = order.getType();
         String searchType;
         if (orderType.equals("BUY")) {
@@ -36,7 +60,6 @@ public class OrderService {
         } else {
             searchType = "BUY";
         }
-
 
         //Check if there is a matching order and update it
         List<Order> matchList = orderRepository.findAllByPriceAndCanTypeAndType(order.getPrice(), order.getCanType(), searchType);
@@ -93,6 +116,14 @@ public class OrderService {
     public void deleteOrder(Order order){
 
     }
+
+    public List<Order> getOrdersFromUser(User user){
+        return orderRepository.findAllByUser(user);
+    }
+
+
+
+
 
 
 
