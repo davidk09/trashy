@@ -5,6 +5,7 @@
     >
       <div class="flex" style="align-items: center">
         <img
+          alt="Profile Picture"
           style="
             width: 2.5rem;
             height: 2.5rem;
@@ -24,7 +25,11 @@
         </h2>
       </div>
     </div>
-    <button class="button" style="width: 100%; margin-top: 1rem">
+    <button
+      class="button"
+      style="width: 100%; margin-top: 1rem"
+      @click="cameraScreen?.open()"
+    >
       <font-awesome-icon icon="camera" /> Take Trashy
     </button>
     <h2 style="margin-top: 2.5rem">Latest activity:</h2>
@@ -34,12 +39,12 @@
       <p style="color: #4ca497">+20 <font-awesome-icon icon="recycle" /></p>
     </div>
   </div>
+  <camera-screen ref="cameraScreen" />
 </template>
 
-<script setup lang="ts"></script>
-<script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-export default {
-  components: { FontAwesomeIcon },
-};
+<script setup lang="ts">
+import CameraScreen from "@/components/CameraScreen.vue";
+import { ref } from "vue";
+
+const cameraScreen = ref<typeof CameraScreen>();
 </script>
