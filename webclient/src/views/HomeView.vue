@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div style="display: flex; justify-content: space-between">
+    <div
+      style="display: flex; align-items: start; justify-content: space-between"
+    >
       <div class="flex" style="align-items: center">
         <div
           style="
@@ -13,9 +15,15 @@
         ></div>
         <h2 class="text-lesser">PanchoK50</h2>
       </div>
-      <h2 style="color: #4ca497">500 <font-awesome-icon icon="recycle" /></h2>
+      <div>
+        <h2 style="color: #4ca497; font-size: 1.2rem">
+          500 <font-awesome-icon icon="recycle" />
+        </h2>
+        <h2 style="color: #8552b4; font-size: 1.2rem">
+          500 <font-awesome-icon icon="trash" />
+        </h2>
+      </div>
     </div>
-    <hr style="color: var(--primary-color); margin-top: 2rem" />
     <h2 style="margin-top: 2rem">Latest activity:</h2>
     <div v-for="i in 4" :key="i" style="margin-top: 0.5rem" class="card">
       <h3>New Trashy</h3>

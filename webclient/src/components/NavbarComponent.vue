@@ -17,6 +17,8 @@
         <div class="offcanvas-body">
           <ul class="navbar-links" @click="showNavbar = false">
             <NavLink name="Home" icon="home" />
+            <NavLink name="Map" icon="map" />
+            <NavLink name="Exchange" icon="arrow-trend-up" />
           </ul>
         </div>
       </div>
