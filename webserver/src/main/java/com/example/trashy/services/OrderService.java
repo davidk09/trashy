@@ -155,8 +155,10 @@ public class OrderService {
 
     public void removeOrder(ExchangeOrder order){
         User u = order.getUser();
-        u.removeOrder(order);
-        userRepository.save(u);
+        if(u != null){
+            u.removeOrder(order);
+            userRepository.save(u);
+        }
         orderRepository.delete(order);
     }
 
