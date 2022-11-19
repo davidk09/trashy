@@ -17,10 +17,10 @@
     </div>
     <hr style="color: var(--primary-color); margin-top: 2rem" />
     <h2 style="margin-top: 2rem">Latest activity:</h2>
-    <div v-for="i in 5" :key="i" style="margin-top: 0.5rem" class="card">
+    <div v-for="i in 4" :key="i" style="margin-top: 0.5rem" class="card">
       <h3>New Trashy</h3>
       <p class="text-lesser">Dakra took a trashy at one of your cans</p>
-      <p style="color: #4ca497">+20 TP</p>
+      <p style="color: #4ca497">+20 <font-awesome-icon icon="recycle" /></p>
     </div>
     <router-link
       style="display: block; text-align: center; margin-top: 0.5rem"
