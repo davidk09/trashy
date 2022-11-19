@@ -4,15 +4,15 @@
       style="display: flex; align-items: start; justify-content: space-between"
     >
       <div class="flex" style="align-items: center">
-        <div
+        <img
           style="
             width: 2.5rem;
             height: 2.5rem;
-            background-color: #245c88;
             border-radius: 50%;
             margin-right: 0.5rem;
           "
-        ></div>
+          :src="require('@/assets/images/default_pfp.jpeg')"
+        />
         <h2 class="text-lesser">PanchoK50</h2>
       </div>
       <div>
@@ -24,7 +24,10 @@
         </h2>
       </div>
     </div>
-    <h2 style="margin-top: 2rem">Latest activity:</h2>
+    <button class="button" style="width: 100%; margin-top: 1rem">
+      <font-awesome-icon icon="camera" /> Take Trashy
+    </button>
+    <h2 style="margin-top: 2.5rem">Latest activity:</h2>
     <div v-for="i in 4" :key="i" style="margin-top: 0.5rem" class="card">
       <h3>New Trashy</h3>
       <p class="text-lesser">Dakra took a trashy at one of your cans</p>

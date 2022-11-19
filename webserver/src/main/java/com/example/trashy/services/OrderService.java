@@ -113,13 +113,19 @@ public class OrderService {
     not supposed to actually delete an Order,
     but to potentially reduce/change amount/price of Order
      */
-    public void deleteOrder(Order order){
+    public void deleteOrder(Long orderId) {
+        var exists = orderRepository.existsById(orderId);
+        if(!exists){
+            throw new IllegalArgumentException("No such Order");
+        }
+        orderRepository.deleteById(orderId);
 
     }
 
     public List<Order> getOrdersFromUser(User user){
         return orderRepository.findAllByUser(user);
     }
+
 
 
 
