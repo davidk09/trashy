@@ -78,6 +78,7 @@ public class OrderService {
 
                 //save the match
                 matchService.addMatch(seller, buyer, matchingOrder.getQuantity(), order.getPrice(), order.getCanType());
+                break;
             }
 
         }
