@@ -171,6 +171,9 @@ public class OrderService {
             return false;
         }
         ExchangeOrder order = orderOptional.get();
+        User user = order.getUser();
+        user.getOrders().remove(order);
+        userRepository.save(user);
         orderRepository.delete(order);
         return true;
     }
