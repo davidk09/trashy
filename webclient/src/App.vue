@@ -7,8 +7,7 @@
   </div>
 
   <footer class="footer-bottom">
-    <p class="footer-item">Impressum</p>
-    <p class="footer-item">Datenschutz</p>
+    <p class="footer-item" style="text-decoration: none">&copy;2022 trashy</p>
   </footer>
 </template>
 

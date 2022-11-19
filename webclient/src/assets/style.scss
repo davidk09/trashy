@@ -23,3 +23,30 @@ h1, h2, h3, h4, h5, h6, p {
 .not-profit {
     color: #ff5454;
 }
+
+.card.sell > h3 {
+    color: #ff5454;
+}
+
+.card.buy > h3 {
+    color: #4ca497;
+}
+
+.card {
+    position: relative;
+}
+
+.cancel-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    color: var(--primary-color);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cancel-button:hover {
+    color: #ff5454;
+    cursor: pointer;
+}
