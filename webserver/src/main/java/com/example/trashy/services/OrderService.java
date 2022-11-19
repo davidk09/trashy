@@ -34,11 +34,13 @@ public class OrderService {
             throw new IllegalArgumentException("Order cannot be null");
         }
 
-        if(!optionalUser.isPresent()){
+        if(optionalUser.isEmpty()){
             throw new IllegalArgumentException("The User does not exist (Custom)");
         }
         User user = optionalUser.get();
         Set<ExchangeOrder> existingOrders = user.getOrders();
+
+        //kann man schöner machen
         Optional<ExchangeOrder> existingOrderOptional = existingOrders.stream().filter(o -> o.getCanType().equals(order.getCanType())).findAny();
 
 
@@ -54,16 +56,16 @@ public class OrderService {
             //check if type is the same, if yes add, if not substract and if result negative change type, if result 0 delete order
             if (existingOrder.getType().equals(order.getType())) {
                 existingOrder.setQuantity(existingOrder.getQuantity() + order.getQuantity());
-                orderRepository.save(existingOrder);
+                addOrderByUser(existingOrder,optionalUser);
             } else {
                 int newQuantity = existingOrder.getQuantity() - order.getQuantity();
                 if (newQuantity > 0) {
                     existingOrder.setQuantity(newQuantity);
-                    orderRepository.save(existingOrder);
+                    addOrderByUser(existingOrder,optionalUser);
                 } else if (newQuantity < 0) {
                     existingOrder.setQuantity(-newQuantity);
                     existingOrder.setType(order.getType());
-                    orderRepository.save(existingOrder);
+                    addOrderByUser(existingOrder,optionalUser);
                 } else {
                     removeOrder(existingOrder);
                 }
@@ -75,12 +77,15 @@ public class OrderService {
         String searchType;
         if (orderType.equals("BUY")) {
             searchType = "SELL";
+            List<ExchangeOrder> matchList_ = orderRepository.findAll().stream().filter(ord -> ord.getPrice() <= order.getPrice() && ord.getCanType().equals(order.getCanType()) && ord.getType().equals(searchType)).toList();
         } else {
             searchType = "BUY";
+            List<ExchangeOrder> matchList_ = orderRepository.findAll().stream().filter(ord -> ord.getPrice() >= order.getPrice() && ord.getCanType().equals(order.getCanType()) && ord.getType().equals(searchType)).toList();
         }
 
         //Check if there is a matching order and update it
         List<ExchangeOrder> matchList = orderRepository.findAllByPriceAndCanTypeAndType(order.getPrice(), order.getCanType(), searchType);
+
 
         for (ExchangeOrder matchingOrder : matchList) {
 
