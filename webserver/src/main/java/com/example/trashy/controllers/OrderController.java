@@ -6,6 +6,8 @@ import com.example.trashy.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("orders")
 public class OrderController {
@@ -25,9 +27,10 @@ public class OrderController {
 
 
 
-    @DeleteMapping
-    public void changeOrder(@RequestBody Order order){
-        orderService.deleteOrder(order);
+
+    @DeleteMapping(path = "{orderId}")
+    public void deleteOrder(@PathVariable("orderId") Long orderId){
+        orderService.deleteOrder(orderId);
     }
 
 
