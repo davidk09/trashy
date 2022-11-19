@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="designed simple home screen">
+    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added navigation bar and page layout">
+      <change afterPath="$PROJECT_DIR$/webclient/src/components/PageTitle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/src/views/MapView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/NavbarComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/NavbarComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "D:\\Data\\CodingProjects\\trashy\\webclient\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/dobby2k/coding/hackaTUM22/trashy/webclient/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Data\CodingProjects\trashy\webclient\src\assets" />
@@ -58,6 +68,7 @@
       <workItem from="1668815748360" duration="90000" />
       <workItem from="1668816004279" duration="88000" />
       <workItem from="1668816155162" duration="3376000" />
+      <workItem from="1668852345211" duration="5385000" />
     </task>
     <task id="LOCAL-00001" summary="designed simple home screen">
       <created>1668819260309</created>

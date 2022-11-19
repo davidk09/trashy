@@ -2,7 +2,7 @@
   <div class="wrapper-outer">
     <div class="wrapper-inner">
       <navbar-component />
-      <div><router-view /></div>
+      <router-view />
     </div>
   </div>
 
