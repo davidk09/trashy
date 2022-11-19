@@ -1,7 +1,6 @@
 package com.example.trashy.controllers;
 
 import com.example.trashy.domain.Can;
-import com.example.trashy.domain.User;
 import com.example.trashy.services.CanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,9 +32,4 @@ public class CanController {
             return ResponseEntity.badRequest().build();
         }
     }
-
-
-
-
-
 }

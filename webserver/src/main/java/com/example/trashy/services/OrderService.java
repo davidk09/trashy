@@ -106,6 +106,7 @@ public class OrderService {
                 matchingOrder.setQuantity(matchingOrder.getQuantity() - order.getQuantity());
                 orderRepository.save(matchingOrder);
 
+
                 //save the match
                 matchService.addMatch(seller, buyer, order.getQuantity(), order.getPrice(), order.getCanType());
                 break;
