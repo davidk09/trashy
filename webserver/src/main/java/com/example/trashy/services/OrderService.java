@@ -122,7 +122,7 @@ public class OrderService {
 
     }
 
-    public List<Order> getOrdersFromUser(User user){
+    public List<Order> getOrdersByUser(User user){
         return orderRepository.findAllByUser(user);
     }
 

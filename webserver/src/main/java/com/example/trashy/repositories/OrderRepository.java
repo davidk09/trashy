@@ -15,6 +15,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     Optional<Order> findOrderByPriceAndCanTypeAndType(double price, String canType, String type);
     Optional<Order> findOrderByUserAndPriceAndCanType(User user, double price, String canType);
+
     List<Order> findAllByPriceAndCanTypeAndType(double price, String canType, String type);
     List<Order> findAllByUser(User user);
 
