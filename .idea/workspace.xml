@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added pfp placeholder and no of trashcans on home screen">
-      <change afterPath="$PROJECT_DIR$/webclient/src/components/ListingComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/src/components/TransactionComponent.vue" afterDir="false" />
+    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="moved transactions and listings into components">
+      <change afterPath="$PROJECT_DIR$/webclient/src/components/OrderPopup.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/PageTitle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/PageTitle.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       <workItem from="1668815748360" duration="90000" />
       <workItem from="1668816004279" duration="88000" />
       <workItem from="1668816155162" duration="3376000" />
-      <workItem from="1668852345211" duration="10724000" />
+      <workItem from="1668852345211" duration="15198000" />
     </task>
     <task id="LOCAL-00001" summary="designed simple home screen">
       <created>1668819260309</created>
@@ -84,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668865694816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="moved transactions and listings into components">
+      <created>1668868688119</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668868688119</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +111,7 @@
     <MESSAGE value="designed simple home screen" />
     <MESSAGE value="added map and exchange view" />
     <MESSAGE value="added pfp placeholder and no of trashcans on home screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pfp placeholder and no of trashcans on home screen" />
+    <MESSAGE value="moved transactions and listings into components" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved transactions and listings into components" />
   </component>
 </project>
