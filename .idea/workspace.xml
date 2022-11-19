@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a9ee499-f3f0-45c7-8565-234085dfa641" name="Changes" comment="Added Database connection">
+    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="designed simple home screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,19 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="7b91e15f-aa0a-48a6-8b38-a3e30f317e27" />
-        <option name="url" value="git@github.com:DaraTM/trashy.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Hjjxy5sscziuxmwfDe8mrajoXB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2Hk4RvTndoOERC1lHgmPiYyPkhO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,40 +30,43 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/francisco/Documents/Francisco/trashy/webserver",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
-    ]
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\Data\\CodingProjects\\trashy\\webclient\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\CodingProjects\trashy\webclient\src\assets" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6a9ee499-f3f0-45c7-8565-234085dfa641" name="Changes" comment="" />
-      <created>1668805638511</created>
+      <changelist id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="" />
+      <created>1668815745973</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668805638511</updated>
-      <workItem from="1668805640970" duration="2922000" />
+      <updated>1668815745973</updated>
+      <workItem from="1668815748360" duration="90000" />
+      <workItem from="1668816004279" duration="88000" />
+      <workItem from="1668816155162" duration="3376000" />
     </task>
-    <task id="LOCAL-00001" summary="Added Database connection">
-      <created>1668810169356</created>
+    <task id="LOCAL-00001" summary="designed simple home screen">
+      <created>1668819260309</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1668810169356</updated>
+      <updated>1668819260309</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added Database connection">
-      <created>1668810178529</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668810178529</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,7 +84,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Database connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Database connection" />
+    <MESSAGE value="designed simple home screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="designed simple home screen" />
   </component>
 </project>

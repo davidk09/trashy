@@ -12,7 +12,19 @@ public class Can {
     @GeneratedValue
     private Long id;
 
+    public Can() {
+    }
+
+    public Can(Long id) {
+        this.id = id;
+    }
 
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
