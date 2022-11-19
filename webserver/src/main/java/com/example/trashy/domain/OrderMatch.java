@@ -3,7 +3,7 @@ package com.example.trashy.domain;
 import javax.persistence.*;
 
 @Entity
-public class Match {
+public class OrderMatch {
 
     //Keep track of the matches
     @Id
@@ -24,10 +24,10 @@ public class Match {
     private String canType;
 
 
-    public Match() {
+    public OrderMatch() {
     }
 
-    public Match(User seller, User buyer, int price, int quantity, String canType) {
+    public OrderMatch(User seller, User buyer, int price, int quantity, String canType) {
         this.quantity = quantity;
         this.seller = seller;
         this.buyer = buyer;
