@@ -32,4 +32,13 @@ public class CanController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @DeleteMapping
+    public ResponseEntity<?> deleteCan(@RequestBody Can can){
+        if (canService.deleteCan(can)){
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

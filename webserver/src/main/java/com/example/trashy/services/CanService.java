@@ -32,4 +32,13 @@ public class CanService {
             return true;
         }
     }
+
+    public boolean deleteCan(Can can) {
+        if (canRepository.findCanById(can.getId()).isPresent()) {
+            canRepository.delete(can);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

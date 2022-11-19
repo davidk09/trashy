@@ -64,8 +64,12 @@ public class OrderController {
 
 
     @DeleteMapping(path = "{orderId}")
-    public void deleteOrder(@PathVariable("orderId") Long orderId){
-        orderService.deleteOrder(orderId);
+    public ResponseEntity<?> deleteOrder(@PathVariable("orderId") Long orderId){
+        if (orderService.deleteOrder(orderId)){
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
 
