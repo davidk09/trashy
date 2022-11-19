@@ -1,4 +1,4 @@
-import axios from "axios";
+import { ExchangeRequests } from "@/scripts/exchange";
 
 class RequestCollection {
   apiUrl: string;
@@ -6,34 +6,8 @@ class RequestCollection {
 
   constructor(apiUrl: string) {
     this.apiUrl = apiUrl;
-    this.exchange = new ExchangeRequests(this, "exchange");
+    this.exchange = new ExchangeRequests(this, "orders/");
   }
 }
 
-class ExchangeRequests {
-  collection: RequestCollection;
-  subDir: string;
-
-  constructor(collection: RequestCollection, subDir: string) {
-    this.collection = collection;
-    this.subDir = subDir;
-  }
-
-  public getOffers() {
-    const path = this.collection.apiUrl + this.subDir + "get-offers";
-    const request = axios.get(path);
-    request.catch(console.log);
-    return request;
-  }
-
-  public addOffer(qty: number, price: number, buy: boolean) {
-    const path = this.collection.apiUrl + this.subDir + "add-offer";
-    const request = axios.post(path, {
-      qty: qty,
-      price: price,
-      buy: buy,
-    });
-    request.catch(console.log);
-    return request;
-  }
-}
+export default RequestCollection;
