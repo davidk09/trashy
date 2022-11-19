@@ -33,12 +33,6 @@
       <p class="text-lesser">Dakra took a trashy at one of your cans</p>
       <p style="color: #4ca497">+20 <font-awesome-icon icon="recycle" /></p>
     </div>
-    <router-link
-      style="display: block; text-align: center; margin-top: 0.5rem"
-      :to="{ name: 'Home' }"
-      class="text-primary"
-      >show more...</router-link
-    >
   </div>
 </template>
 

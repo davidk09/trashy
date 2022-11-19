@@ -6,6 +6,7 @@ import com.example.trashy.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,8 +22,17 @@ public class UserService {
     public Optional<User> getUserById(Long id) {
         return userRepository.findUserById(id);
     }
-    public void addUser(User user){
-        userRepository.save(user);
+    public boolean addUser(User user){
+        if (userRepository.findUserById(user.getId()).isPresent()){
+            return false;
+        } else {
+            userRepository.save(user);
+            return true;
+        }
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
 

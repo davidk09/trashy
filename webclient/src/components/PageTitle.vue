@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-6">
+  <div class="mb-2">
     <h1 style="margin-bottom: 0.1rem">
       <font-awesome-icon
         :icon="icon"

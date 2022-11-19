@@ -4,6 +4,7 @@ package com.example.trashy.controllers;
 import com.example.trashy.domain.User;
 import com.example.trashy.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,9 +20,18 @@ public class UserController {
     }
 
 
-    @PostMapping
-    public void addNewUser(@RequestBody User user){
-        userService.addUser(user);
+    @PostMapping("/add")
+    public ResponseEntity<?> addNewUser(@RequestBody User user){
+        if (userService.addUser(user)){
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<User>> getAllUsers(){
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
 
