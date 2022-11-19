@@ -19,6 +19,10 @@ public class User {
         this.name = name;
     }
 
+    public User() {
+
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
