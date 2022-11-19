@@ -10,10 +10,13 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import axios from "axios";
 import VueAxios from "vue-axios";
+import RequestCollection from "@/scripts/requests";
 
 library.add(fas, far, fab);
+const collection = new RequestCollection("http://localhost:8080/");
 
 const app = createApp(App);
+app.provide("reqUtil", collection);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(VueAxios, axios);
 app.use(router);

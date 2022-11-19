@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added camera feature">
-      <change afterPath="$PROJECT_DIR$/webclient/src/scripts/exchange.ts" afterDir="false" />
+    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added request library">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/src/scripts/requests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/scripts/requests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/ConfirmPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/ConfirmPopup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/OrderPopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/OrderPopup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/scripts/exchange.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/scripts/exchange.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/ExchangeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/ExchangeOrder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dobby2k/coding/hackaTUM22/trashy/webserver&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -38,6 +44,9 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/dobby2k/coding/hackaTUM22/trashy/webclient/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -60,6 +69,7 @@
       <workItem from="1668816004279" duration="88000" />
       <workItem from="1668816155162" duration="3376000" />
       <workItem from="1668852345211" duration="10724000" />
+      <workItem from="1668896576010" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="designed simple home screen">
       <created>1668819260309</created>
@@ -89,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668884102373</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added request library">
+      <created>1668896000015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668896000015</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +128,7 @@
     <MESSAGE value="added map and exchange view" />
     <MESSAGE value="added pfp placeholder and no of trashcans on home screen" />
     <MESSAGE value="added camera feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="added camera feature" />
+    <MESSAGE value="added request library" />
+    <option name="LAST_COMMIT_MESSAGE" value="added request library" />
   </component>
 </project>

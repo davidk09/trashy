@@ -39,8 +39,8 @@ class ExchangeRequests {
     });
   }
 
-  public deleteOrder(order: Order): Promise<number> {
-    const path = this.collection.apiUrl + this.subDir + `${order.id}`;
+  public deleteOrder(orderId: number): Promise<number> {
+    const path = this.collection.apiUrl + this.subDir + `${orderId}`;
     return new Promise((resolve, reject) => {
       axios.delete(path).then(
         (response) => {
@@ -63,14 +63,14 @@ type Order = {
 };
 
 enum OrderType {
-  BUY,
-  SELL,
+  BUY = "BUY",
+  SELL = "SELL",
 }
 
 enum CanType {
-  HIGH,
-  MEDIUM,
-  LOW,
+  HIGH = "HIGH",
+  MEDIUM = "MEDIUM",
+  LOW = "LOW",
 }
 
 export { ExchangeRequests, Order, OrderType, CanType };

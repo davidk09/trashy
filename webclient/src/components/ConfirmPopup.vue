@@ -6,7 +6,9 @@
         <p class="mt-2">{{ message }}</p>
         <div class="gapped-group mt-2">
           <button class="button" @click="close()">Cancel</button>
-          <button class="button accent">Confirm</button>
+          <button class="button accent" @click="$emit('confirm', delId)">
+            Confirm
+          </button>
         </div>
       </div>
     </div>
@@ -21,10 +23,12 @@ const defaultMessage =
   "Do you really want to cancel your offer? This can not be undone";
 const show = ref(false);
 const message = ref(defaultMessage);
+const delId = ref(-1);
 
-function open(pMessage = "") {
+function open(id: number, pMessage = "") {
   if (pMessage != "") message.value = pMessage;
   else message.value = defaultMessage;
+  delId.value = id;
   show.value = true;
 }
 

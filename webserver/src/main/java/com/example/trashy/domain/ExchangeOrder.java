@@ -1,6 +1,8 @@
 package com.example.trashy.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,6 +19,7 @@ public class ExchangeOrder {
     // 3 Can Type: HIGH, MEDIUM, LOW
     private String canType;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
