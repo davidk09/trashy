@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/src/assets/cibumArs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/src/components/NavLink.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webclient/src/components/NavbarComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webclient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/assets/cibumArs.css" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/cibumArs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/NavLink.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/NavLink.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/components/NavbarComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/components/NavbarComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webclient/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +40,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\Data\\CodingProjects\\trashy\\webclient\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\CodingProjects\trashy\webclient\src\assets" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668815745973</updated>
       <workItem from="1668815748360" duration="90000" />
+      <workItem from="1668816004279" duration="88000" />
+      <workItem from="1668816155162" duration="3011000" />
     </task>
     <servers />
   </component>

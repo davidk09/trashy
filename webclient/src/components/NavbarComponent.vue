@@ -1,29 +1,18 @@
 <template>
   <nav class="navbar" :class="{ show: showNavbar }">
     <div class="navbar-body">
-      <div
-        class="navbar-header"
-        style="width: 100%; justify-content: space-between"
-      >
-        <router-link
-          class="navbar-brand"
-          :to="{ name: 'Home' }"
-          style="height: 3rem; margin: 0"
-        >
-          Hello!
+      <div class="navbar-header">
+        <router-link class="navbar-brand text-accent" :to="{ name: 'Home' }">
+          trashy
         </router-link>
-        <button
-          class="navbar-burger"
-          @click="showNavbar = true"
-          style="margin: 0; color: #cacbcb"
-        >
+        <button class="navbar-burger" @click="showNavbar = true">
           <font-awesome-icon icon="bars" />
         </button>
       </div>
 
       <div class="navbar-offcanvas">
         <div class="offcanvas-header">
-          <p class="offcanvas-title">Men&uuml;</p>
+          <p class="offcanvas-title">Menu</p>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-links" @click="showNavbar = false">
