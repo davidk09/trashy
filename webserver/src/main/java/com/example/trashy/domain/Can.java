@@ -11,6 +11,9 @@ public class Can {
     @Id
     @GeneratedValue
     private Long id;
+    private CanType type;
+
+
 
     public Can() {
     }
