@@ -1,6 +1,7 @@
 package com.example.trashy.services;
 
 
+import com.example.trashy.domain.ExchangeOrder;
 import com.example.trashy.domain.User;
 import com.example.trashy.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,12 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final OrderService orderService;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, OrderService orderService) {
         this.userRepository = userRepository;
+        this.orderService = orderService;
     }
 
     public Optional<User> getUserById(Long id) {
@@ -35,6 +38,19 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public boolean deleteUser(User user){
+        Optional<User> userToDeleteOptional = userRepository.findUserById(user.getId());
+        if (userToDeleteOptional.isPresent()){
+            User userToDelete = userToDeleteOptional.get();
+            for (ExchangeOrder order : userToDelete.getOrders()){
+                orderService.deleteOrder(order.getId());
+            }
+            userRepository.delete(user);
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 }
