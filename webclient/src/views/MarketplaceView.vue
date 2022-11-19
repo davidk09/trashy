@@ -11,48 +11,23 @@
     </div>
     <h2 style="margin-top: 1rem">Your listings:</h2>
     <div>
-      <div class="card buy">
-        <h3>Buy Trashcans</h3>
-        <p>Want 1000</p>
-        <p>
-          <span style="color: #4ca497"
-            >10 <font-awesome-icon icon="recycle"
-          /></span>
-          each
-        </p>
-      </div>
-      <div class="card sell" style="margin-top: 0.5rem">
-        <h3>Sell Trashcans</h3>
-        <p>Selling 100</p>
-        <p>
-          <span style="color: #4ca497"
-            >100 <font-awesome-icon icon="recycle"
-          /></span>
-          each
-        </p>
-      </div>
+      <listing-component price="10" :buy="true" qty="100" />
+      <listing-component price="100" :buy="false" qty="10" />
     </div>
     <h2 style="margin-top: 1rem">Past transactions:</h2>
     <div>
-      <div class="card sell">
-        <h3>Sold Trashcans</h3>
-        <p>
-          <span class="money">+100 <font-awesome-icon icon="recycle" /></span> |
-          <span class="not-profit"
-            >-1000 <font-awesome-icon icon="trash"
-          /></span>
-        </p>
-      </div>
-      <div class="card buy" style="margin-top: 0.5rem">
-        <h3>Bought Trashcans</h3>
-        <p>
-          <span class="not-profit"
-            >-1000 <font-awesome-icon icon="recycle"
-          /></span>
-          |
-          <span class="money">+100 <font-awesome-icon icon="trash" /></span>
-        </p>
-      </div>
+      <transaction-component
+        price="100"
+        :buy="false"
+        qty="10"
+        date="19.11.2022"
+      />
+      <transaction-component
+        price="10"
+        :buy="true"
+        qty="100"
+        date="11.09.2022"
+      />
     </div>
   </div>
 </template>
@@ -60,14 +35,6 @@
 <script setup lang="ts">
 import PageTitle from "@/components/PageTitle";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import ListingComponent from "@/components/ListingComponent.vue";
+import TransactionComponent from "@/components/TransactionComponent.vue";
 </script>
-
-<style scoped>
-.card.sell > h3 {
-  color: #ff5454;
-}
-
-.card.buy > h3 {
-  color: #4ca497;
-}
-</style>
