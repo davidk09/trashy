@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added pfp placeholder and no of trashcans on home screen">
+    <list default="true" id="7acea6f7-495d-4a78-966a-14356fbb758a" name="Changes" comment="added map and exchange view">
       <change afterPath="$PROJECT_DIR$/webclient/src/components/ListingComponent.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webclient/src/components/TransactionComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/assets/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webclient/src/views/MarketplaceView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/src/main/java/com/example/trashy/domain/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Hk4RvTndoOERC1lHgmPiYyPkhO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

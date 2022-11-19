@@ -1,13 +1,10 @@
 package com.example.trashy.controllers;
 
 
-import com.example.trashy.domain.Order;
 import com.example.trashy.domain.User;
 import com.example.trashy.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("users")
@@ -28,7 +25,10 @@ public class UserController {
     }
 
 
-
+    @GetMapping
+    public User getDummyUser(){
+        return new User(1L,"paul");
+    }
 
 
 }

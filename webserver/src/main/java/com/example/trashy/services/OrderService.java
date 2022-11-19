@@ -1,38 +1,56 @@
 package com.example.trashy.services;
 
 
-import com.example.trashy.domain.Order;
+import com.example.trashy.domain.ExchangeOrder;
 import com.example.trashy.domain.User;
 import com.example.trashy.repositories.OrderRepository;
+import com.example.trashy.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class OrderService {
 
     private final OrderRepository orderRepository;
+
+    private final UserRepository userRepository;
     private final MatchService matchService;
 
 
     @Autowired
-    public OrderService(OrderRepository orderRepository, MatchService matchService) {
+    public OrderService(OrderRepository orderRepository,UserRepository userRepository, MatchService matchService) {
         this.orderRepository = orderRepository;
+        this.userRepository = userRepository;
         this.matchService = matchService;
     }
 
 
-    public void addOrder(Order order){
+    public void addOrder(ExchangeOrder order, Optional<User> optionalUser){
         if (order == null) {
             throw new IllegalArgumentException("Order cannot be null");
         }
 
+        if(!optionalUser.isPresent()){
+            throw new IllegalArgumentException("The User does not exist (Custom)");
+        }
+        User user = optionalUser.get();
+        Set<ExchangeOrder> existingOrders = user.getOrders();
+        Optional<ExchangeOrder> existingOrderOptional = existingOrders.stream().filter(o -> o.getCanType().equals(order.getCanType())).findAny();
+
+
+
         //Check if existing order from same user exists
-        Optional<Order> existingOrderOptional = orderRepository.findOrderByUserAndPriceAndCanType(order.getUser(), order.getPrice(), order.getCanType());
+
+        //Optional<ExchangeOrder> existingOrderOptional = orderRepository.findOrderByUserAndPriceAndCanType(order.getUser(), order.getPrice(), order.getCanType());
+                //orderRepository.findAllByPriceAndCanTypeAndType(price,order.getCanType(),order.getType());
+        //orderRepository.findOrderByUserAndPriceAndCanType(order.getUser(), order.getPrice(), order.getCanType());
+        //orderRepository.findAllByPriceAndCanTypeAndType()
         if (existingOrderOptional.isPresent()) {
-            Order existingOrder = existingOrderOptional.get();
+            ExchangeOrder existingOrder = existingOrderOptional.get();
             //check if type is the same, if yes add, if not substract and if result negative change type, if result 0 delete order
             if (existingOrder.getType().equals(order.getType())) {
                 existingOrder.setQuantity(existingOrder.getQuantity() + order.getQuantity());
@@ -47,7 +65,7 @@ public class OrderService {
                     existingOrder.setType(order.getType());
                     orderRepository.save(existingOrder);
                 } else {
-                    orderRepository.delete(existingOrder);
+                    removeOrder(existingOrder);
                 }
             }
         }
@@ -62,9 +80,9 @@ public class OrderService {
         }
 
         //Check if there is a matching order and update it
-        List<Order> matchList = orderRepository.findAllByPriceAndCanTypeAndType(order.getPrice(), order.getCanType(), searchType);
+        List<ExchangeOrder> matchList = orderRepository.findAllByPriceAndCanTypeAndType(order.getPrice(), order.getCanType(), searchType);
 
-        for (Order matchingOrder : matchList) {
+        for (ExchangeOrder matchingOrder : matchList) {
 
             //determine seller and buyer
             User seller;
@@ -90,14 +108,14 @@ public class OrderService {
             } else if (matchingOrder.getQuantity() < order.getQuantity()) {
                 //if the matching order has less quantity than the new order, update the new order and delete the matching order
                 order.setQuantity(order.getQuantity() - matchingOrder.getQuantity());
-                orderRepository.save(order);
-                orderRepository.delete(matchingOrder);
+                addOrderByUser(order,optionalUser);
+                removeOrder(matchingOrder);
 
                 //save the match
                 matchService.addMatch(seller, buyer, matchingOrder.getQuantity(), order.getPrice(), order.getCanType());
             } else {
                 //if the matching order has the same quantity as the new order, delete both
-                orderRepository.delete(matchingOrder);
+                removeOrder(matchingOrder);
 
                 //save the match
                 matchService.addMatch(seller, buyer, matchingOrder.getQuantity(), order.getPrice(), order.getCanType());
@@ -106,6 +124,29 @@ public class OrderService {
 
         }
 
+
+    }
+
+
+    public void addOrderByUser(ExchangeOrder order1, Optional<User> optionalUser){
+        if(optionalUser.isPresent()){
+            User user = optionalUser.get();
+            ExchangeOrder order = orderRepository.save(order1);
+
+            order.setUser(user);
+            orderRepository.save(order);
+            user.addOrder(order);
+            userRepository.save(user);
+        }
+    }
+
+
+
+    public void removeOrder(ExchangeOrder order){
+        User u = order.getUser();
+        u.removeOrder(order);
+        userRepository.save(u);
+        orderRepository.delete(order);
     }
 
 
@@ -114,15 +155,17 @@ public class OrderService {
     but to potentially reduce/change amount/price of Order
      */
     public void deleteOrder(Long orderId) {
-        var exists = orderRepository.existsById(orderId);
-        if(!exists){
-            throw new IllegalArgumentException("No such Order");
+        var order =orderRepository.findById(orderId);
+        if(order.isPresent()){
+            removeOrder(order.get());
+        }else {
+            throw new IllegalArgumentException("Order does not exist");
         }
-        orderRepository.deleteById(orderId);
+
 
     }
 
-    public List<Order> getOrdersByUser(User user){
+    public List<ExchangeOrder> getOrdersByUser(User user){
         return orderRepository.findAllByUser(user);
     }
 

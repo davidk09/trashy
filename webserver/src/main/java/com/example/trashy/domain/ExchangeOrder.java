@@ -4,7 +4,7 @@ package com.example.trashy.domain;
 import javax.persistence.*;
 
 @Entity
-public class Order {
+public class ExchangeOrder {
 
     @Id
     @GeneratedValue
@@ -22,20 +22,21 @@ public class Order {
     private User user;
 
 
-    public Order() {
+    public ExchangeOrder() {
 
     }
 
     //constructor with all parameters
-    public Order(Long id, String type, int price, int quantity, String canType) {
+    public ExchangeOrder(Long id, String type, int price, int quantity, String canType) {
         this.id = id;
         this.type = type;
         this.price = price;
         this.quantity = quantity;
         this.canType = canType;
+        this.user = null;
     }
 
-    public Order(Long id, String type) {
+    public ExchangeOrder(Long id, String type) {
         this.id = id;
         this.type = type;
     }

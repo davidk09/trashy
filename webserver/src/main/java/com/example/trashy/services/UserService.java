@@ -1,7 +1,6 @@
 package com.example.trashy.services;
 
 
-import com.example.trashy.domain.Order;
 import com.example.trashy.domain.User;
 import com.example.trashy.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
