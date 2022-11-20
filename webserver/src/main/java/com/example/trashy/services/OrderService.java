@@ -82,8 +82,9 @@ public class OrderService {
                 addOrderByUser(order,user);
             }
             for(ExchangeOrder matchingOrder : matchList) {
-                if(matchOrders(user,matchingOrder.getUser(),matchingOrder,order,user))
-                    break;
+                if (matchOrders(user, matchingOrder.getUser(), matchingOrder, order, user))
+                        break;
+
             }
         } else {
             searchType = "BUY";
@@ -93,8 +94,9 @@ public class OrderService {
                 addOrderByUser(order,user);
             }
             for(ExchangeOrder matchingOrder : matchList) {
-                if(matchOrders(matchingOrder.getUser(),user,matchingOrder,order,user))
-                    break;
+                    if (matchOrders(matchingOrder.getUser(), user, matchingOrder, order, user))
+                        break;
+
 
             }
         }
